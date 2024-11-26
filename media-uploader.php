@@ -144,10 +144,10 @@ $img_exts = array('jpeg', 'jpg','png', 'webp');
         }
         else{
             if(in_array($ext, $img_exts)){
-            //compress_image($_FILES['upload']['tmp_name'], 'images/' . $autualfileimagepart, 70);
+            compress_image($_FILES['upload']['tmp_name'], 'images/' . $autualfileimagepart, 70);
             echo 'Success';
             }else{
-                 //move_uploaded_file($_FILES['upload']['tmp_name'], 'images/' . $autualfileimagepart);
+                 move_uploaded_file($_FILES['upload']['tmp_name'], 'images/' . $autualfileimagepart);
                  echo 'Success';
             }
         } 
